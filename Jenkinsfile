@@ -24,7 +24,7 @@ pipeline {
         stage('Validate Deployment') {
             steps {
                 script {
-                    def output = sh(script: "curl -s http://35.172.111.254", returnStdout: true).trim()
+                    def output = sh(script: "curl -s http://44.200.188.54", returnStdout: true).trim()
 
                     if (!output.contains("Harika")) {
                         error("Webserver validation failed!")
