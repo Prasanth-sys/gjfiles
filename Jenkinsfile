@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     // Replace EC2_PUBLIC_IP
-                    def output = sh(script: "curl -s http://172.31.68.66", returnStdout: true).trim()
+                    def output = sh(script: "curl -s http://44.200.188.54", returnStdout: true).trim()
 
                     if (!output.contains("Harika")) {
                         error("Webserver validation failed!")
